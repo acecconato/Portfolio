@@ -1,0 +1,210 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block content %}
+    <button class="material-scrolltop d-none d-lg-block" type="button"></button>
+    <header class="container pt-2 pt-lg-4" id="home">
+        <div class="row">
+            <div class="col-10 mx-auto">
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+                    <button class="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse"
+                            data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav mt-2 mt-lg-0 justify-content-between">
+                            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about_me">About me</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <hr class="d-none d-lg-block d-xl-block">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-10 mx-auto">
+                <div class="row justify-content-center align-items-end">
+
+                    <div class="col-12 col-lg-4 mb-3 mb-lg-0">
+                        <h1 id="site-title">
+                            Denis
+                            <span class="d-block">Novik</span>
+                        </h1>
+                    </div>
+
+                    <div class="col-12 col-lg-4 text-lg-center">
+                        <h2 id="description">
+                            UX | UI designer
+                            <span class="d-block">24 years old, Minsk</span>
+                        </h2>
+                    </div>
+
+                    <div class="col d-none d-lg-flex text-center justify-content-end">
+                        <p id="language-selection"><a href="#">ENG</a> | <a class="active" href="#">FR</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-10 mx-auto mt-5">
+                <img id="header-image" class="img-fluid" src="{{ asset('build/images/header.jpg') }}" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About me -->
+        <div class="container-fluid" id="about_me">
+            <div class="row">
+                <div class="col-12 mx-auto text-center mt-5">
+                    <h2>About me</h2>
+                </div>
+
+                <div class="col-8 col-md-6 col-lg-4 mx-auto text-center mt-3">
+                    <p>Hi, I'm Denis - UX/UI designer from Minsk. I'm interested in design and everything connected with
+                        it.</p>
+                    <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
+                    <p>Ready to implement excellent projects with wonderful people.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="container-fluid" id="skills">
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h2 class="mb-4">Skills</h2>
+                    <p>I work in such programs as</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-8 mx-auto">
+                    <div class="row text-center justify-content-center">
+                        <div
+                                class="col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between align-items-start pb-5 skill">
+                            <img class="skill-img mx-auto" src="assets/img/skills/photoshop.png" alt="">
+                            <h2 class="mx-auto">Adobe Photoshop</h2>
+                            <div class="stars mx-auto">
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star"></span>
+                            </div>
+                        </div>
+                        <div
+                                class="col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between align-items-start pb-5 skill">
+                            <img class="skill-img mx-auto" src="assets/img/skills/adobe_illustrator.png" alt="">
+                            <h2 class="mx-auto">Adobe Illustrator</h2>
+                            <div class="stars mx-auto">
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                            </div>
+                        </div>
+                        <div
+                                class="col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between align-items-start pb-5 skill">
+                            <img class="skill-img mx-auto" src="assets/img/skills/after_effect.png" alt="">
+                            <h2 class="mx-auto">After Effect</h2>
+                            <div class="stars mx-auto">
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star"></span>
+                            </div>
+                        </div>
+                        <div
+                                class="col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between align-items-start pb-5 skill">
+                            <img class="skill-img mx-auto" src="assets/img/skills/figma.png" alt="">
+                            <h2 class="mx-auto">Figma</h2>
+                            <div class="stars mx-auto">
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star checked"></span>
+                                <span class="oi oi-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PORTFOLIO SECTION -->
+        <div class="container-fluid pb-5" id="portfolio">
+            <div class="row">
+                <div class="col-12 text-center mt-5">
+                    <h2>Portfolio</h2>
+                </div>
+            </div>
+
+            <!-- NO PROJECTS DISPLAY -->
+            <!-- <div class="row mt-5">
+                <div class="col-12 col-lg-10 mx-auto text-center">
+                    <p>Sorry, there is no projects to display at the moment</p>
+                </div>
+
+                <div class="col-10 col-lg-8 mx-auto">
+                    <img class="img-fluid" src="assets/img/404-projects.jpg" alt="">
+                </div>
+            </div> -->
+
+            <div class="row">
+                <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
+                    <!-- Best idea: Open a modal then display DESKTOP, TABLET and MOBILE full website screenshot
+                    in separed tabs in lazy loading -->
+                    <a href="#">
+                        <img class="img-fluid" src="assets/img/portfolio/01_pres.png" alt="">
+                    </a>
+                    <p class="mt-4"><a href="#">Online fashion store - Homepage</a></p>
+                </div>
+                <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
+                    <a href="#">
+                        <img class="img-fluid" src="assets/img/portfolio/02_pres.png" alt="">
+                    </a>
+                    <p class="mt-4"><a href="#">Reebok Store - Concept</a></p>
+                </div>
+                <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
+                    <a href="#">
+                        <img class="img-fluid" src="assets/img/portfolio/03_pres.png" alt="">
+                    </a>
+                    <p class="mt-4"><a href="#">Braun Landing Page - Concept</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="container-fluid pb-5" id="contact">
+            <div class="row mt-5">
+                <div class="col-12 col-lg-10 mx-auto text-center">
+                    <h2>Contacts</h2>
+                    <p class="pt-2">Want to know more or just chat ?<br>You are welcome!</p>
+                    <p class="pt-2">
+                        <a name="send_message" id="send_message" class="btn btn-dark" href="#">Send message</a>
+                    </p>
+                </div>
+            </div>
+        </div> <!-- FOOTER -->
+        <footer class="container-fluid" id="footer">
+            <div class="row mb-5">
+                <div class="col-12 col-lg-4 mx-auto d-flex justify-content-around">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+{% endblock %}

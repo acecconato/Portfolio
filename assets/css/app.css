@@ -1,0 +1,200 @@
+/* FONTS IMPORT */
+@font-face {
+    font-family: 'Gilroy-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gilroy-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Gilroy-Medium.woff') format('woff');
+}
+
+
+/*  FONTS */
+.gilroy-medium {
+    font-family: 'Gilroy-Medium', Arial, Helvetica, sans-serif;
+}
+
+.gilroy-bold {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: 'Gilroy-Medium', Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+}
+
+h1, h2 {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+}
+
+/* CUSTOMS */
+.no-border {
+    border: none;
+}
+
+/*  HEADER NAVBAR */
+.navbar-nav {
+    width: 100%;
+}
+
+nav a.nav-link {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+    color: #828282;
+    font-size: 1.2em;
+}
+
+nav .nav-link.active {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+nav .nav-link:hover {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* HEADER TITLE */
+#site-title {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+    font-size: 2.9em;
+}
+
+/* HEADER DESCRIPTION */
+#description {
+    font-size: 1.2em;
+    font-family: 'Gilroy-Medium', Arial, Helvetica, sans-serif; 
+}
+
+/* HEADER LANGUAGE SELECTOR */
+#language-selection {
+    transform: rotate(-90deg);
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+}
+
+#language-selection a {
+    color: #828282;
+}
+
+#language-selection a.active {
+    color: black;
+}
+
+#language-selection a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* HEADER IMAGE */
+@media (min-width: 992px) {
+    #header-image {
+        object-fit: cover;
+        object-position: top;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* HORIZONTAL RULE */
+hr {
+    color: #828282;
+    border: 1px solid #828282;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/* ABOUT ME SECTION */
+#about_me {
+    background-color: #F6F6F6;
+    margin-top: 104px;
+    padding-bottom: 50px;
+}
+
+#about_me h2 {
+    font-size: 2.250em;
+}
+
+
+/* SKILLS SECTION */
+
+.skill {
+    min-height: 205px;
+    margin-bottom: 25px;
+}
+
+#skills img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.skill h2 {
+    font-family: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+    font-size: 0.875em;
+    color: #828282;
+    word-spacing: 100vw;
+}
+
+.skill-img {
+    width: 80px;
+    height: auto;
+}
+
+.stars img {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+}
+
+.oi-star {
+    color: #E5E5E5;
+}
+
+.oi-star.checked {
+    color: black;
+}
+
+/* PORTFOLIO SECTION */
+#portfolio {
+    background-color: #F6F6F6;
+    min-height: 500px;
+}
+
+.project a {
+    color: black;
+    text-decoration: underline;
+}
+
+.project a:hover {
+    text-decoration: none;
+}
+
+/* CONTACT SECTION */
+#send_message {
+    border-radius: 30px;
+    background-color: black;
+}
+
+#send_message:hover {
+    box-shadow: 5px 5px 5px 0px grey;
+}
+
+#footer i {
+    font-size: 40px;
+}
+
+#footer a {
+    color: black;
+}
+
+/* SCROLL TO TOP */
+.material-scrolltop {
+    background-color: black;
+}
+
+.material-scrolltop:hover {
+    background-color: black;
+}
