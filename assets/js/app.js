@@ -1,5 +1,8 @@
-// ICONS, FONTS
-require('font-awesome/css/font-awesome.min.css');
+// FONT-AWESOME
+require('@fortawesome/fontawesome-free/css/all.min.css');
+require('@fortawesome/fontawesome-free');
+
+// OPEN ICONIC
 require('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 // CSS

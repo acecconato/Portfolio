@@ -1,0 +1,35 @@
+{% extends 'app/layout.html.twig' %}
+
+{% block title %}
+    Connexion - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <meta name="robots" content="noindex, nofollow">
+    {{ encore_entry_link_tags('login') }}
+{% endblock %}
+
+{% block javascripts %}
+   {{ encore_entry_script_tags('login') }}
+{% endblock %}
+
+{% block content %}
+    {{ form(form) }}
+{#    <div class="text-center">#}
+{#    <form class="form-signin">#}
+{#        <img class="mb-4" src="{{ asset('build/images/ac_logo.svg') }}" alt="Anthony cecconato logo">#}
+{#        <h1 class="h3 mb-3 font-weight-normal">Administration</h1>#}
+{#        <label for="inputEmail" class="sr-only">Identifiant</label>#}
+{#        <input type="text" id="inputEmail" class="form-control" placeholder="Identifiants" required autofocus>#}
+{#        <label for="inputPassword" class="sr-only">Mot de passe</label>#}
+{#        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>#}
+{#        <div class="checkbox mb-3">#}
+{#            <label>#}
+{#                <input type="checkbox" value="remember-me"> Rester connecté#}
+{#            </label>#}
+{#        </div>#}
+{#        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>#}
+{#    </form>#}
+{#    </div>#}
+{% endblock %}

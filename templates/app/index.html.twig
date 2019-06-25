@@ -1,5 +1,9 @@
 {% extends 'app/layout.html.twig' %}
 
+{% block title %}
+    Portfolio - {{ parent() }}
+{% endblock %}
+
 {% block content %}
     <button class="material-scrolltop d-none d-lg-block" type="button"></button>
     <header class="container pt-2 pt-lg-4" id="home">
@@ -15,11 +19,11 @@
 
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav mt-2 mt-lg-0 justify-content-between">
-                            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#about_me">About me</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="#home">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about_me">À propos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -33,15 +37,15 @@
 
                     <div class="col-12 col-lg-4 mb-3 mb-lg-0">
                         <h1 id="site-title">
-                            Denis
-                            <span class="d-block">Novik</span>
+                            Anthony
+                            <span class="d-block">Cecconato</span>
                         </h1>
                     </div>
 
                     <div class="col-12 col-lg-4 text-lg-center">
                         <h2 id="description">
-                            UX | UI designer
-                            <span class="d-block">24 years old, Minsk</span>
+                            Développeur PHP / Symfony
+                            <span class="d-block">23 ans, Toulouse (France)</span>
                         </h2>
                     </div>
 
@@ -64,14 +68,16 @@
         <div class="container-fluid" id="about_me">
             <div class="row">
                 <div class="col-12 mx-auto text-center mt-5">
-                    <h2>About me</h2>
+                    <h2>À propos de moi</h2>
                 </div>
 
-                <div class="col-8 col-md-6 col-lg-4 mx-auto text-center mt-3">
-                    <p>Hi, I'm Denis - UX/UI designer from Minsk. I'm interested in design and everything connected with
-                        it.</p>
-                    <p>I'm studying at courses "Web and mobile design interfaces" in IT-Academy.</p>
-                    <p>Ready to implement excellent projects with wonderful people.</p>
+                <div class="col-8 col-md-6 mx-auto text-center mt-3">
+                    <p>Salut, je m'appelle Anthony et je suis passionné par l'informatique et la programmation depuis
+                        mon adolescence.</p>
+                    <p>J'étudie actuellement pour devenir <span class="d-inline-block">"Développeur d'applications PHP / Symfony"</span>
+                        sur une formation proposée par Openclassrooms. Mais j'apprends (et j'ai appris) beaucoup
+                        d'autres choses en autodidacte.</p>
+                    <p>Je suis prêt à vous accompagner dans vos projets afin de donner vie à vos idées !</p>
                 </div>
             </div>
         </div>
@@ -80,8 +86,8 @@
         <div class="container-fluid" id="skills">
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <h2 class="mb-4">Skills</h2>
-                    <p>I work in such programs as</p>
+                    <h2 class="mb-4">Compétences</h2>
+                    <p>Je connais plein de choses comme</p>
                 </div>
             </div>
 
@@ -188,10 +194,10 @@
         <div class="container-fluid pb-5" id="contact">
             <div class="row mt-5">
                 <div class="col-12 col-lg-10 mx-auto text-center">
-                    <h2>Contacts</h2>
-                    <p class="pt-2">Want to know more or just chat ?<br>You are welcome!</p>
+                    <h2>Contactez-moi</h2>
+                    <p class="pt-2">Vous voulez en savoir plus ou juste discuter ?<br> Vous êtes les bienvenus !</p>
                     <p class="pt-2">
-                        <a name="send_message" id="send_message" class="btn btn-dark" href="#">Send message</a>
+                        <a name="send_message" id="send_message" class="btn btn-dark" href="#">Envoyer un message</a>
                     </p>
                 </div>
             </div>
