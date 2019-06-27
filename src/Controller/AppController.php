@@ -2,7 +2,9 @@
 
 namespace App\Controller;
 
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AppController extends AbstractController
@@ -10,7 +12,7 @@ class AppController extends AbstractController
     /**
      * @Route("/", name="app_homepage")
      */
-    public function index()
+    public function index(EntityManagerInterface $manager)
     {
         return $this->render('app/index.html.twig');
     }
