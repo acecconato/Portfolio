@@ -20,6 +20,12 @@ This project use:
 
 ### Setup and configuration
 
-1. Todo
+1. `composer install && yarn install`
+2. `cp .env .env.local`
+3. Configure your `.env.local` file
+4. `php bin/console d:d:c`
+5. `php bin/console d:s:c` or `php bin/console d:s:u --force`
+6. `php bin/console app:create:admin`
+7. Setup your web server or test it with `php bin/console server:start`
 
 
