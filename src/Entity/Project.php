@@ -19,23 +19,22 @@ class Project
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=60)
+     * @ORM\Column(type="string", length=30)
      */
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
-    private $website;
+    private $webUrl;
 
     /**
-     * @var ArrayCollection
-     * One Project has many Images
-     * @ORM\ManyToMany(targetEntity="Image")
+     * One to many with join table
+     * @ORM\ManyToMany(targetEntity="Image", cascade={"persist", "remove"})
      * @ORM\JoinTable(name="projects_images",
-     *      joinColumns={ @ORM\JoinColumn(name="project_id", referencedColumnName="id") },
-     *      inverseJoinColumns={ @ORM\JoinColumn(name="image_id", referencedColumnName="id") }
-     * )
+     *     joinColumns={@ORM\JoinColumn(name="project_id", referencedColumnName="id", onDelete="CASCADE")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="image_id", referencedColumnName="id", onDelete="CASCADE")}
+     *     )
      */
     private $images;
 
@@ -61,14 +60,14 @@ class Project
         return $this;
     }
 
-    public function getWebsite(): ?string
+    public function getWebUrl(): ?string
     {
-        return $this->website;
+        return $this->webUrl;
     }
 
-    public function setWebsite(?string $website): self
+    public function setWebUrl(?string $webUrl): self
     {
-        $this->website = $website;
+        $this->webUrl = $webUrl;
 
         return $this;
     }

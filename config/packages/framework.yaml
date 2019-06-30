@@ -18,3 +18,5 @@ framework:
     default_locale: 'fr'
     translator:
         fallbacks: [ 'en' ]
+
+    validation: { enable_annotations: true }
