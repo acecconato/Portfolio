@@ -11,6 +11,7 @@ This project use:
 - Symfony 4.3
 - Webpack-Encore
 - Simple landing page designed by **[Denis Novik](https://www.behance.net/novik_denis)**
+- EasyAdmin
 
 ## You want to use it ? Follow the steps below
 
