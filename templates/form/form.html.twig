@@ -1,0 +1,23 @@
+{% block _image_file_widget %}
+    {{ form_widget(form, {'attr': {'onchange': 'previewFile(this)'} }) }}
+    <img src="" alt="" width="150">
+
+    <script>
+        function previewFile(target) {
+            let preview = document.querySelector('img');
+            let file    = document.querySelector('input[type=file]').files[0];
+            let reader  = new FileReader();
+
+            reader.addEventListener("load", function () {
+                preview.src = reader.result;
+            }, false);
+
+            let regex = /^image\//;
+            if (file.type.match(regex)) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = '';
+            }
+        }
+    </script>
+{% endblock %}
