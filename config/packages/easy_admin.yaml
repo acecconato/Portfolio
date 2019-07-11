@@ -11,6 +11,11 @@ easy_admin:
             class: App\Entity\Project
         Skill:
             class: App\Entity\Skill
+            form:
+                fields:
+                    - name
+                    - rating
+                    - { property: 'image', type: 'App\Form\ImageType' }
         Image:
             class: App\Entity\Image
             form:
@@ -20,7 +25,7 @@ easy_admin:
                 fields:
                     - 'id'
                     - { property: 'web_view', type: 'image', label: 'Thumbnail' }
-                    - 'filename'
+                    - { property: 'tempFilename', label: 'Filename' }
 
     design:
         form_theme:

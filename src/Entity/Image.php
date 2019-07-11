@@ -9,6 +9,7 @@ use Symfony\Component\Validator\Constraints as Asserts;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
  * @ORM\EntityListeners({"App\EntityListener\ImageListener"})
+ * @ORM\HasLifecycleCallbacks()
  */
 class Image
 {
@@ -53,7 +54,7 @@ class Image
         return $this->filename;
     }
 
-    public function setFilename(string $filename): self
+    public function setFilename(?string $filename): self
     {
         $this->filename = $filename;
 
@@ -94,5 +95,10 @@ class Image
         $this->webView = $webView;
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->getFilename();
     }
 }
