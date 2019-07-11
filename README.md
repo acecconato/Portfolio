@@ -21,6 +21,8 @@ This project use:
 
 ### Setup and configuration
 
+Work in progress!
+
 1. `composer install && yarn install`
 2. `cp .env .env.local`
 3. Configure your `.env.local` file
