@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
@@ -32,9 +33,11 @@ class Project
      * One to many with join table
      * @ORM\ManyToMany(targetEntity="Image", cascade={"persist", "remove"})
      * @ORM\JoinTable(name="projects_images",
-     *     joinColumns={@ORM\JoinColumn(name="project_id", referencedColumnName="id", onDelete="CASCADE")},
-     *     inverseJoinColumns={@ORM\JoinColumn(name="image_id", referencedColumnName="id", onDelete="CASCADE")}
+     *     joinColumns={@ORM\JoinColumn(name="project_id", referencedColumnName="id")},
+     *     inverseJoinColumns={@ORM\JoinColumn(name="image_id", referencedColumnName="id")}
      *     )
+     * @Assert\Valid()
+     * @Assert\NotNull()
      */
     private $images;
 
@@ -96,5 +99,18 @@ class Project
         }
 
         return $this;
+    }
+
+    public function getImagesList()
+    {
+        /**
+         * @var $image Image
+         */
+        $list = [];
+        foreach ($this->images as $image) {
+            $list[] = $image->getWebView();
+        }
+
+        return $list;
     }
 }

@@ -7,8 +7,30 @@ easy_admin:
     entities:
         User:
             class: App\Entity\User
+            disabled_actions: ['new', 'edit']
+            help: 'Add a new admin user with php bin/console app:create:admin command'
+
         Project:
             class: App\Entity\Project
+            form:
+                fields:
+                    - name
+                    - { property: webUrl, label: 'URL' }
+                    -
+                        property: images
+                        type: 'collection'
+                        type_options:
+                            entry_type: 'App\Form\ImageType'
+                            allow_add: true
+                            allow_delete: true
+                            by_reference: false
+            list:
+                fields:
+                    - id
+                    - name
+                    - webUrl
+                    - { property: imagesList, template: 'admin/images.html.twig', label: 'Thumbnail' }
+
         Skill:
             class: App\Entity\Skill
             form:
@@ -16,6 +38,7 @@ easy_admin:
                     - name
                     - rating
                     - { property: 'image', type: 'App\Form\ImageType' }
+
         Image:
             class: App\Entity\Image
             form:
@@ -26,6 +49,7 @@ easy_admin:
                     - 'id'
                     - { property: 'web_view', type: 'image', label: 'Thumbnail' }
                     - { property: 'tempFilename', label: 'Filename' }
+            disabled_actions: ['new']
 
     design:
         form_theme:

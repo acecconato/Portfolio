@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\Validator\Constraints as Asserts;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ImageRepository")
@@ -34,8 +34,8 @@ class Image
 
     /**
      * @var File
-     * @Asserts\Image()
-     * @Asserts\NotBlank()
+     * @Assert\Image()
+     * @Assert\NotNull()
      */
     private $file;
 
@@ -66,7 +66,7 @@ class Image
         return $this->file;
     }
 
-    public function setFile(File $file = null): self
+    public function setFile(File $file): self
     {
         $this->file = $file;
 
@@ -99,6 +99,6 @@ class Image
 
     public function __toString()
     {
-        return $this->getFilename();
+        return $this->getTempFilename();
     }
 }
