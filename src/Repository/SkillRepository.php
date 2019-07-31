@@ -19,6 +19,14 @@ class SkillRepository extends ServiceEntityRepository
         parent::__construct($registry, Skill::class);
     }
 
+    public function loadAll()
+    {
+        return $this->createQueryBuilder('s')
+            ->innerJoin('s.image', 'image')
+            ->addSelect('image')
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Skill[] Returns an array of Skill objects
     //  */

@@ -11,10 +11,15 @@ class AppController extends AbstractController
     /**
      * @Route("/", name="app_homepage")
      */
-    public function index(EntityManagerInterface $manager)
+    public function index()
     {
-        $results = $manager->getRepository("App\Entity\Project")->find(3);
-
         return $this->render('app/index.html.twig');
+    }
+
+    public function listSkills(EntityManagerInterface $manager)
+    {
+        $skills = $manager->getRepository('App\Entity\Skill')->loadAll();
+
+        return $this->render('app/skills.html.twig', ["skills" => $skills]);
     }
 }

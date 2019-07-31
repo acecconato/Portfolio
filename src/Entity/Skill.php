@@ -24,12 +24,14 @@ class Skill
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min="0", max="5")
      */
     private $rating;
 
     /**
      * @ORM\OneToOne(targetEntity="Image", cascade={"persist", "remove"})
      * @Assert\Valid()
+     * @Assert\NotNull()
      */
     private $image;
 

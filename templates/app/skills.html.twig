@@ -1,0 +1,22 @@
+<div class="row mt-5">
+    <div class="col-8 mx-auto">
+        <div class="row text-center justify-content-center">
+            {% for skill in skills %}
+                <div
+                        class="col-12 col-md-6 col-lg-3 d-flex flex-column justify-content-between align-items-start pb-5 skill">
+                    <img class="skill-img mx-auto" src="{{ asset(skill.image.webView) }}" alt="">
+                    <h2 class="mx-auto">{{ skill.name }}</h2>
+                    <div class="stars mx-auto">
+                        {% for i in 0..5 %}
+                            <span class="oi oi-star {% if i < skill.rating %}checked{% endif %}"></span>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12 text-center mb-5 alert alert-warning">
+                    Aucune compétence à afficher pour le moment.
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
