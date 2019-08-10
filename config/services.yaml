@@ -42,6 +42,11 @@ services:
         tags:
             - { name: doctrine.orm.entity_listener }
 
+    twig.extension.date:
+        class: Guzzlefry\Twig\AgeExtension
+        tags:
+            - { name: twig.extension }
+
     # AUTOWIRING
     App\Service\FileUploader: '@app.file_uploader'
 

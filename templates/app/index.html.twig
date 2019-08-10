@@ -72,12 +72,48 @@
                 </div>
 
                 <div class="col-12 col-md-8 mx-auto text-center mt-3">
-                    <p>Salut, je m'appelle Anthony et je suis passionné par l'informatique et la programmation depuis
-                        mon adolescence.</p>
-                    <p>J'étudie actuellement pour devenir <span class="d-inline-block">"Développeur d'applications PHP / Symfony"</span>
-                        sur une formation proposée par Openclassrooms. Mais j'apprends (et j'ai appris) beaucoup
-                        d'autres choses en autodidacte.</p>
-                    <p>Je suis prêt à vous accompagner dans vos projets afin de donner vie à vos idées !</p>
+                    <p>Je m'appelle Anthony, j'ai {{ date('25-05-1996')|age }} ans et je suis passionné par le monde
+                        informatique depuis mon adolescence. J'ai commencé par m'intéresser au fonctionnement d'un
+                        ordinateur ainsi que ses composants et mon premier langage de programmation a été, comme
+                        beaucoup, le HTML et CSS !</p>
+
+                    <p>J'ai continué mon apprentissage au fil des années, notamment avec PHP et, plus tard, avec le
+                        Lua. Malgré ma passion envers le milieu numérique, mes choix d'adolescents m'ont poussé à faire
+                        des études
+                        en mécanique automobile, un milieu complètement différent.
+                    </p>
+
+                    <p>
+                        Aujourd'hui, j'ai décidé de me reconvertir et de me lancer dans ce que j'aime vraiment, le
+                        développement ! C'est pourquoi
+                        je suis actuellement en formation pour devenir <span class="d-inline-block"><strong>
+                                <a href="https://openclassrooms.com/fr/paths/59-developpeur-dapplication-php-symfony" target="_blank">
+                                    Développeur d'applications PHP / Symfony
+                                </a>
+                            </strong>.</span>
+                    </p>
+
+                    <p>
+                        Je suis curieux de nature et j'aime apprendre de nouvelles choses, c'est pourquoi je me
+                        forme
+                        également sur d'autres <a href="#skills">technologies</a> comme le Javascript (ES6+), Nodejs,
+                        Linux et
+                        d'autres choses.
+                    </p>
+
+                    <h3 class="pt-4 mb-4">Les outils que j'utilise pour programmer</h3>
+                    <p>Pour développer, mon ordinateur principal est sur
+                        <a href="https://www.opensuse.org/" target="_blank">Opensuse Tumbleweed</a>
+                        et mon ordinateur portable est actuellement sur
+                        <a href="https://linuxmint.com/" target="_blank">Linux Mint</a>.
+                        Mes éditeurs favoris sont
+                        <a href="https://www.jetbrains.com/phpstorm/" target="_blank">Phpstorm</a> et
+                        <a href="https://code.visualstudio.com/" target="_blank">Visual studio code</a>.
+                        Pour les maquettes, j'aime beaucoup <a href="https://www.figma.com" target="_blank">Figma</a>.
+                    </p>
+
+                    <p class="pt-4">Si vous cherchez quelqu'un avec qui travailler et que mon profil vous intéresse, je vous invite à
+                    <a href="#contact">prendre contact avec moi</a>.</p>
                 </div>
             </div>
         </div>
@@ -86,7 +122,7 @@
         <div class="container-fluid" id="skills">
             <div class="row mt-5">
                 <div class="col-12 text-center">
-                    <h2 class="mb-4">Compétences</h2>
+                    <h2 class="mb-4">Mes compétences</h2>
                 </div>
             </div>
 
@@ -97,43 +133,11 @@
         <div class="container-fluid pb-5" id="portfolio">
             <div class="row">
                 <div class="col-12 text-center mt-5">
-                    <h2>Portfolio</h2>
+                    <h2>Mes projets réalisés</h2>
                 </div>
             </div>
 
-            <!-- NO PROJECTS DISPLAY -->
-            <!-- <div class="row mt-5">
-                <div class="col-12 col-lg-10 mx-auto text-center">
-                    <p>Sorry, there is no projects to display at the moment</p>
-                </div>
-
-                <div class="col-10 col-lg-8 mx-auto">
-                    <img class="img-fluid" src="assets/img/404-projects.jpg" alt="">
-                </div>
-            </div> -->
-
-            <div class="row">
-                <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
-                    <!-- Best idea: Open a modal then display DESKTOP, TABLET and MOBILE full website screenshot
-                    in separed tabs in lazy loading -->
-                    <a href="#">
-                        <img class="img-fluid" src="assets/img/portfolio/01_pres.png" alt="">
-                    </a>
-                    <p class="mt-4"><a href="#">Online fashion store - Homepage</a></p>
-                </div>
-                <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
-                    <a href="#">
-                        <img class="img-fluid" src="assets/img/portfolio/02_pres.png" alt="">
-                    </a>
-                    <p class="mt-4"><a href="#">Reebok Store - Concept</a></p>
-                </div>
-                <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
-                    <a href="#">
-                        <img class="img-fluid" src="assets/img/portfolio/03_pres.png" alt="">
-                    </a>
-                    <p class="mt-4"><a href="#">Braun Landing Page - Concept</a></p>
-                </div>
-            </div>
+            {{ render(controller('App\\Controller\\AppController::listProjects')) }}
         </div>
 
         <!-- CONTACT SECTION -->
@@ -141,20 +145,30 @@
             <div class="row mt-5">
                 <div class="col-12 col-lg-10 mx-auto text-center">
                     <h2>Contactez-moi</h2>
-                    <p class="pt-2">Vous voulez en savoir plus ou juste discuter ?<br> Vous êtes les bienvenus !</p>
                     <p class="pt-2">
-                        <a name="send_message" id="send_message" class="btn btn-dark" href="#">Envoyer un message</a>
+                        Vous voulez en savoir plus ou juste discuter ?
+                        <span class="d-block">Je suis là pour vous écouter et répondre à vos questions.</span>
+                    </p>
+
+                    <p class="pt-2">
+                        <a id="send_message" class="btn btn-dark" href="mailto:{{ email }}">
+                            M'envoyer un message
+                        </a>
                     </p>
                 </div>
             </div>
-        </div> <!-- FOOTER -->
+        </div>
+
+        <!-- FOOTER -->
         <footer class="container-fluid" id="footer">
             <div class="row mb-5">
                 <div class="col-12 col-lg-4 mx-auto d-flex justify-content-around">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                    <a href="#"><i class="fab fa-behance"></i></a>
+                    {% for key, social in socials %}
+                        {% if social is not empty %}
+                            <a href="{{ social }}" title="{{ key|title }}" target="_blank"><i
+                                        class="fab fa-{{ key }}"></i></a>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </footer>

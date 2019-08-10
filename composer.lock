@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c20c3431126919293768c8a40f47a6a9",
+    "content-hash": "c1794d0a16afff1c29f126064ad04da0",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1403,6 +1403,51 @@
                 "rest"
             ],
             "time": "2016-10-17T18:31:11+00:00"
+        },
+        {
+            "name": "guzzlefry/twig-age-extension",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzlefry/twig-age-extension.git",
+                "reference": "c33850909c1c217d3e2f5715503a545a397a24d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzlefry/twig-age-extension/zipball/c33850909c1c217d3e2f5715503a545a397a24d0",
+                "reference": "c33850909c1c217d3e2f5715503a545a397a24d0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "twig/twig": ">=1.12"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Guzzlefry\\Twig": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gus King",
+                    "email": "gus@gusking.com",
+                    "homepage": "http://www.gusking.com"
+                }
+            ],
+            "description": "Simple Twig extension to calculate the age in years based on a DateTime instance",
+            "homepage": "http://github.com/guzzlefry/twig-age-extension#README",
+            "keywords": [
+                "age",
+                "date",
+                "templating",
+                "twig"
+            ],
+            "time": "2016-07-06T14:54:13+00:00"
         },
         {
             "name": "jdorn/sql-formatter",
@@ -7005,7 +7050,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "guzzlefry/twig-age-extension": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

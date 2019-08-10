@@ -2,3 +2,13 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
+    globals:
+        email: '%env(EMAIL)%'
+        socials:
+            linkedin: '%env(LINKEDIN_URL)%'
+            instagram: '%env(INSTAGRAM_URL)%'
+            dribbble: '%env(DRIBBBLE_URL)%'
+            behance: '%env(BEHANCE_URL)%'
+            facebook: '%env(FACEBOOK_URL)%'
+            twitter: '%env(TWITTER_URL)%'
+            github: '%env(GITHUB_URL)%'

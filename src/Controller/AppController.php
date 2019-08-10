@@ -22,4 +22,11 @@ class AppController extends AbstractController
 
         return $this->render('app/skills.html.twig', ["skills" => $skills]);
     }
+
+    public function listProjects(EntityManagerInterface $manager)
+    {
+        $projects = $manager->getRepository('App\Entity\Project')->loadAll();
+
+        return $this->render('app/projects.html.twig', ["projects" => $projects]);
+    }
 }
