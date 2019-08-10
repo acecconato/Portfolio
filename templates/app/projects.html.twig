@@ -1,0 +1,22 @@
+{% if projects|length > 0 %}
+    {% for project in projects %}
+        <div class="row">
+            <div class="mt-5 pt-3 col-12 col-lg-10 mx-auto text-center project">
+                <a href="#">
+                    <img class="img-fluid" src="{{ asset(project.images|first.webView) }}" alt="">
+                </a>
+                <p class="mt-4"><a href="{{ project.webUrl }}">{{ project.name }}</a></p>
+            </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <div class="row mt-5">
+        <div class="col-12 col-lg-10 mx-auto text-center">
+            <p>Désolé, il n'y a pas de projets à afficher pour le moment.</p>
+        </div>
+
+        <div class="col-10 col-lg-8 mx-auto">
+            <img class="img-fluid" src="{{ asset('build/images/404-projects.jpg') }}" alt="">
+        </div>
+    </div>
+{% endif %}
