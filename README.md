@@ -29,7 +29,7 @@ This project use:
 3. `cp .env .env.local`
 4. Configure your `.env.local` file (For a mysql database configuration, use `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`). Read the Symfony doc for more configuration info.
 5. `php bin/console d:d:c`
-6. `php bin/console d:s:c` or `php bin/console d:s:u --force` (be sure your APP_ENV in .env.local is defined on dev mod for this)
+6. `php bin/console d:s:c` or `php bin/console d:s:u --force`
 7. `php bin/console app:create:admin`
 8. `yarn build`
 9. Setup your web server or test it with `php bin/console server:start`
