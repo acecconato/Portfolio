@@ -27,7 +27,7 @@ This project use:
 2. `cd portfolio`
 2. `composer install && yarn install`
 3. `cp .env .env.local`
-4. Configure your `.env.local` file (For a mysql database configuration, use `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`). Read the Symfony doc for more configuration info.
+4. Configure your `.env.local` file (For a mysql database configuration, use `DATABASE_URL=mysql://db_user:db_password@127.0.0.1:3306/db_name`). If you are using mariadb, let's check how to [configure it properly](https://www.doctrine-project.org/projects/doctrine-dbal/en/latest/reference/configuration.html#connecting-using-a-url).
 5. `php bin/console d:d:c`
 6. `php bin/console d:s:c` or `php bin/console d:s:u --force`
 7. `php bin/console app:create:admin`
